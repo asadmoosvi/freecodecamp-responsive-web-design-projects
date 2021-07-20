@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+$ff: "Montserrat", sans-serif;
+$bp: 768px;
+$bp-lg: 992px;
+$header-bg: #eeeeee;
+$transition-time: 0.3s;
+$clr-secondary: #548ca8;
+$text-clr: #334257;
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $clr-secondary;
+}
+
+body {
+  margin: 0;
+  font-family: $ff;
+  color: $text-clr;
+}
+
+@mixin btn {
+  text-transform: uppercase;
+  background: $clr-secondary;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: background $transition-time;
+  &:hover {
+    background: darken($clr-secondary, 10%);
+    cursor: pointer;
+  }
+  &:active {
+    background: darken($clr-secondary, 20%);
+  }
+}
+
+.material-icons {
+  font-size: 2rem;
+  color: $text-clr;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $header-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  &__btn {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    border: none;
+    padding: 2em;
+    @media screen and (min-width: $bp) {
+      display: none;
+    }
+  }
+  &__img {
+    width: 150px;
+    @media screen and (min-width: $bp) {
+      margin-left: 2rem;
+      transition: transform $transition-time;
+      &:hover {
+        transform: rotate(-3deg);
+      }
+    }
+  }
+  &__nav {
+    align-self: stretch;
+    display: none;
+    @media screen and (min-width: $bp) {
+      display: block;
+    }
+  }
+  &__links {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @media screen and (min-width: $bp) {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      margin-right: 2rem;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 0.75em;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 5px;
+    @media screen and (min-width: $bp) {
+      padding: 1em 1.5em;
+      transition: background $transition-time, color $transition-time;
+      &:hover {
+        background: $clr-secondary;
+        color: white;
+      }
+    }
+  }
+
+  @media screen and (min-width: $bp) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.container {
+  width: $bp-lg;
+  max-width: 90%;
+  margin: auto;
+}
+
+section {
+  margin: 1.5rem 0;
+}
+.section-heading {
+  font-size: 3rem;
+}
+
+.features {
+  margin-top: 10rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $bp) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__img {
+    border-radius: 20px 5px 20px 5px;
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    @media screen and (min-width: $bp) {
+      width: 50%;
+    }
+  }
+  &__content {
+    @media screen and (min-width: $bp) {
+      width: 40%;
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+  }
+  &__ctaheading {
+    font-size: 1.5rem;
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input {
+    font-size: 1em;
+    font-family: inherit;
+    margin: 0.5em 0;
+    padding: 0.5em 0.75em;
+    &_submit {
+      @include btn;
+    }
+  }
+}
+
+#video {
+  max-width: 100%;
+}
+
+.price-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  @media screen and (min-width: $bp) {
+    flex-direction: row;
+  }
+}
+.price-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  //border: 1px solid $header-bg;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  @media screen and (min-width: $bp) {
+    height: 300px;
+    justify-content: space-between;
+    &_pro {
+      height: 400px;
+    }
+  }
+  &__name {
+    margin: 0;
+    background: $header-bg;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: $text-clr;
+  }
+  &__price {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 1rem 0;
+  }
+  &__features {
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+  }
+
+  &__select {
+    @include btn;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+.footer {
+  background: $header-bg;
+  overflow: auto;
+  text-align:center;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Product Landing Page</title>
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <button class="header__btn">
+        <span class="material-icons">menu</span>
+      </button>
+      <a class="header__img" href="/">
+        <img
+          id="header-img"
+          src="https://mlbzn7n4sphe.i.optimole.com/MU3uIw0-q_hbPq2F/w:auto/h:auto/q:75/https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-6.svg"
+          alt="Logo Image"
+        />
+      </a>
+      <nav id="nav-bar" class="header__nav">
+        <ul class="header__links">
+          <li>
+            <a class="header__link nav-link" href="#features">Features</a>
+          </li>
+          <li>
+            <a class="header__link nav-link" href="#how-it-works"
+              >How It Works</a
+            >
+          </li>
+          <li><a class="header__link nav-link" href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="features" class="features">
+        <h1 class="section-heading">Features</h1>
+        <div class="hero">
+          <img
+            src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80"
+            alt=""
+            class="hero__img"
+          />
+          <div class="hero__content">
+            <h2 class="hero__heading">What we can do for you</h2>
+            <p class="hero__text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+              nesciunt odio explicabo dolorem tempora libero, omnis consequuntur
+              blanditiis, modi aliquam atque, aut enim quis voluptates.
+            </p>
+            <form
+              id="form"
+              action="https://www.freecodecamp.com/email-submit"
+              class="hero__cta"
+            >
+              <h3 class="hero__ctaheading">
+                Sign up today for great new articles every day!
+              </h3>
+              <input
+                class="hero__input"
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Enter your email"
+              />
+              <input
+                class="hero__input hero__input_submit"
+                type="submit"
+                value="sign up now"
+                id="submit"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works">
+        <h1 class="section-heading">How it works</h1>
+        <iframe
+          id="video"
+          width="1216"
+          height="480"
+          src="https://www.youtube.com/embed/ITw5H54CNxo?list=PLF6OZMIvu7e41ZFVtftWZVhSSeTy6CQ38"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section id="pricing">
+        <h1 class="section-heading">Pricing</h1>
+        <div class="price-cards">
+          <div class="price-card">
+            <h3 class="price-card__name">Free</h3>
+            <h4 class="price-card__price">$0</h4>
+            <p class="price-card__features">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus molestiae expedita aperiam reprehenderit nihil eius!
+            </p>
+            <button class="price-card__select">Select</button>
+          </div>
+
+          <div class="price-card price-card_pro">
+            <h3 class="price-card__name">Pro</h3>
+            <h4 class="price-card__price">$4.99</h4>
+            <p class="price-card__features">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              nesciunt asperiores, iusto veniam at corporis?
+            </p>
+            <button class="price-card__select">Select</button>
+          </div>
+
+          <div class="price-card">
+            <h3 class="price-card__name">Gold</h3>
+            <h4 class="price-card__price">$9.99</h4>
+            <p class="price-card__features">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque,
+              sit modi sint quae non quis!
+            </p>
+            <button class="price-card__select">Select</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <h3>Contact Us</h3>
+        <div class="contact-us">
+          <a href="#footer"><span class="material-icons">facebook</span></a>
+          <a href="#footer"><span class="material-icons">email</span></a>
+        </div>
+        <p>&copy; Copyright 2021</p>
+        <p>All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+$ff: "Quicksand", sans-serif;
+$br: 10px;
+$bp: 768px;
+$shade-clr: #a64b51;
+
+body {
+  margin: 0;
+  font-family: $ff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1489549132488-d00b7eee80f1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHx8c3BhY2U_c2lnfHx8fHx8MTYyNjcyMDc4Nw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920")
+      no-repeat bottom;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+  height: 300px;
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    font-size: 4rem;
+    margin: 0;
+    @media (max-width: $bp) {
+      font-size: 2rem;
+    }
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    @media (max-width: $bp) {
+      font-size: 1rem;
+    }
+  }
+}
+
+#main {
+  max-width: 70%;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  @media (max-width: $bp) {
+    max-width: 80%;
+  }
+}
+
+.img-card {
+  background: white;
+  margin-top: -75px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.175);
+  padding: 0.75em 1em;
+  border-radius: $br;
+  &__caption {
+    padding: 1rem 0;
+  }
+
+  @media (max-width: $bp) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -100px;
+  }
+}
+
+#tribute-info {
+  margin-top: 3rem;
+}
+.headline {
+  text-align: center;
+}
+
+.timelines {
+  list-style-type: none;
+  padding: 0;
+}
+
+.timeline {
+  &__year {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: $shade-clr;
+  }
+}
+
+.quote {
+  padding: 1em;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.175);
+  border-radius: $br;
+  margin: 0;
+  margin-top: 2rem;
+  p {
+    margin-top: 0;
+  }
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__text {
+    font-weight: bold;
+    font-size: 1.2em;
+    font-style: italic;
+  }
+  &__btn {
+    background: $shade-clr;
+    color: white;
+    padding: 1em;
+    border-radius: $br;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px darken($shade-clr, 20%);
+    transition: background 0.3s, box-shadow 0.1s, transform 0.1s;
+    &:hover {
+      background: darken($shade-clr, 10%);
+    }
+    &:active {
+      background: darken($shade-clr, 20%);
+      transform: translateY(4px);
+      box-shadow: initial;
+    }
+  }
+}
