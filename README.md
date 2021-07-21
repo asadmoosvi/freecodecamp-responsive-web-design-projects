@@ -7,5 +7,5 @@ You can also find these projects on my [Codepen](https://codepen.io/asadmoosvi).
 - [x] Tribute Page
 - [x] Survey Form
 - [x] Product Landing Page
-- [ ] Technical Documentation Page
+- [x] Technical Documentation Page
 - [ ] Personal Portfolio Webpage
