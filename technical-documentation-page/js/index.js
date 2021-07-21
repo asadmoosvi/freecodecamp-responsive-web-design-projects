@@ -2,6 +2,12 @@ const menuBtn = document.querySelector('.main-header__menu');
 const navBar = document.querySelector('.nav');
 menuBtn.onclick = function() {
   navBar.classList.toggle('nav-opened');
+  let spanElem = menuBtn.querySelector('span');
+  if (spanElem.textContent === 'menu') {
+    spanElem.textContent = 'close';
+  } else {
+    spanElem.textContent = 'menu';
+  }
 }
 
 // setup highlightjs
