@@ -4,18 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Technical Documentation Page</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/default.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"
+      defer
+    ></script>
     <!--<script src="js/bundle.js" defer></script>-->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" defer></script>
   </head>
   <body>
     <header class="main-header">
       <h1 class="main-header__heading">Technical Documentation</h1>
+      <button class="main-header__menu">
+        <span class="material-icons">menu</span>
+      </button>
     </header>
 
     <nav id="navbar" class="nav">
       <header class="nav__heading">JS Documentation</header>
       <ul class="nav__links">
         <li>
-          <a href="#Introduction" class="nav__link nav-link">Introduction</a>
+          <a href="#Introduction" class="nav__link nav-link link-active">Introduction</a>
         </li>
         <li>
           <a href="#What_you_should_really_know" class="nav__link nav-link"
@@ -166,8 +183,8 @@
             write your first "Hello world" JavaScript code:
           </p>
           <pre><code class="main-section__code">
-          function greetMe(yourName) { alert("Hello " + yourName); }
-          greetMe("World");
+function greetMe(yourName) { alert("Hello " + yourName); }
+greetMe("World");
           </code></pre>
         </div>
       </section>
@@ -202,7 +219,7 @@
           </p>
           <p class="main-section__text">With the keyword var. For example,</p>
           <pre><code class="main-section__code">
-          var x = 42.
+var x = 42.
           </code></pre>
         </div>
         <p class="main-section__text">
@@ -212,14 +229,16 @@
           By simply assigning it a value. For example,
         </p>
         <pre><code class="main-section__code">
-        x = 42.
+x = 42.
         </code></pre>
         <p class="main-section__text">
           This always declares a global variable. It generates a strict
           JavaScript warning. You shouldn't use this variant.
         </p>
         <p class="main-section__text">With the keyword let. For example,</p>
-        <pre><code class="main-section__code">let y = 13.</code></pre>
+        <pre><code class="main-section__code">
+let y = 13.
+        </code></pre>
         <p class="main-section__text">
           This syntax can be used to declare a block scope local variable. See
           Variable scope below.
@@ -244,14 +263,14 @@
             block, which in this case is an if statement.
           </p>
           <pre><code class="main-section__code">
-          if (true) { var x = 5; } console.log(x); // 5
+if (true) { var x = 5; } console.log(x); // 5
           </code></pre>
           <p class="main-section__text">
             This behavior changes, when using the let declaration introduced in
             ECMAScript 2015.
           </p>
           <pre><code class="main-section__code">
-          if (true) { let y = 5; } console.log(y); // ReferenceError: y is notdefined
+if (true) { let y = 5; } console.log(y); // ReferenceError: y is notdefined
           </code></pre>
         </div>
       </section>
@@ -282,7 +301,7 @@
             and can contain alphabetic, numeric, or underscore characters.
           </p>
           <pre><code class="main-section__code">
-          const PI = 3.14;
+const PI = 3.14;
           </code></pre>
           <p class="main-section__text">
             A constant cannot change value through assignment or be re-declared
@@ -298,18 +317,20 @@
             variable in the same scope. For example:
           </p>
           <pre><code class="main-section__code">
-          // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
-          WILL
-          CAUSE AN ERROR ALSO function f() { const g = 5; var g;
-          //statements
-          }
+// THIS WILL CAUSE AN ERROR function f() {}; const f = 5;
+// THIS WILL CAUSE AN ERROR ALSO
+function f() {
+  const g = 5;
+  var g;
+  //statements
+}
           </code></pre>
           <p class="main-section__text">
             However, object attributes are not protected, so the following
             statement is executed without problems.
           </p>
           <pre><code class="main-section__code">
-          const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";
+const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";
           </code></pre>
         </div>
       </section>
@@ -360,7 +381,7 @@
             condition is false. An if statement looks as follows:
           </p>
           <pre><code class="main-section__code">
-          if (condition) { statement_1; } else { statement_2; }
+if (condition) { statement_1; } else { statement_2; }
           </code></pre>
           <p class="main-section__text">
             condition can be any expression that evaluates to true or false. See
@@ -374,9 +395,9 @@
             conditions tested in sequence, as follows:
           </p>
           <pre><code class="main-section__code">
-          if (condition_1) { statement_1; } else if (condition_2) {
-          statement_2;
-          } else if (condition_n) { statement_n; } else { statement_last; }
+if (condition_1) { statement_1; } else if (condition_2) {
+statement_2;
+} else if (condition_n) { statement_n; } else { statement_last; }
           </code></pre>
           <p class="main-section__text">
             In the case of multiple conditions only the first logical condition
@@ -387,10 +408,10 @@
           </p>
         </div>
         <pre><code class="main-section__code">
-        if (condition) { statement_1_runs_if_condition_is_true;
-        statement_2_runs_if_condition_is_true; } else {
-        statement_3_runs_if_condition_is_false;
-        statement_4_runs_if_condition_is_false; }
+if (condition) { statement_1_runs_if_condition_is_true;
+statement_2_runs_if_condition_is_true; } else {
+statement_3_runs_if_condition_is_false;
+statement_4_runs_if_condition_is_false; }
         </code></pre>
         <p class="main-section__text">
           It is advisable to not use simple assignments in a conditional
@@ -398,7 +419,7 @@
           glancing over the code. For example, do not use the following code:
         </p>
         <pre><code class="main-section__code">
-        if (x = y) { /* statements here */ }
+if (x = y) { /* statements here */ }
         </code></pre>
         <p class="main-section__text">
           If you need to use an assignment in a conditional expression, a common
@@ -406,7 +427,7 @@
           example:
         </p>
         <pre><code class="main-section__code">
-        if ((x = y)) { /* statements here */ }
+if ((x = y)) { /* statements here */ }
         </code></pre>
       </section>
       <section class="main-section" id="while_statement">
@@ -417,7 +438,7 @@
             condition evaluates to true. A while statement looks as follows:
           </p>
           <pre><code class="main-section__code">
-          while (condition) statement
+while (condition) statement
           </code></pre>
           <p class="main-section__text">
             If the condition becomes false, statement within the loop stops
@@ -438,7 +459,7 @@
             The following while loop iterates as long as n is less than three:
           </p>
           <pre><code class="main-section__code">
-          var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }
+var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }
           </code></pre>
           <p class="main-section__text">
             With each iteration, the loop increments n and adds that value to x.
@@ -484,7 +505,7 @@
             square:
           </p>
           <pre><code class="main-section__code">
-          function square(number) { return number * number; }
+function square(number) { return number * number; }
           </code></pre>
           <p class="main-section__text">
             The function square takes one argument, called number. The function
@@ -493,7 +514,7 @@
             statement specifies the value returned by the function.
           </p>
           <pre><code class="main-section__code">
-          return number * number;
+return number * number;
           </code></pre>
           <p class="main-section__text">
             Primitive parameters (such as a number) are passed to functions by
