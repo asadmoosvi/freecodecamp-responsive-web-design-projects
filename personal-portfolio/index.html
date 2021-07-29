@@ -4,35 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
     <script src="./src/js/index.js" defer></script>
     <title>FCC Personal Portfolio</title>
   </head>
   <body>
     <header class="header">
-      <a class="menu" href="#"><img src="./src/images/menu_white_24dp.svg" alt=""></a>
+      <a class="menu" href="javascript:;"><img src="./src/images/menu_white_24dp.svg" alt=""></a>
       <div class="container">
-        <nav class="nav">
+        <nav class="nav" id="navbar">
           <ul class="nav__links">
-            <li><a href="#" class="nav__link">Home</a></li>
-            <li><a href="#" class="nav__link">About</a></li>
-            <li><a href="#" class="nav__link">Projects</a></li>
-            <li><a href="#" class="nav__link">Contact</a></li>
+            <li><a href="/" class="nav__link">Home</a></li>
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#projects" class="nav__link">Projects</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="welcome-section">
       <div class="container container_padding">
-        <h1 class="hero__subheading">Hey I am John Doe.</h1>
-        <h2 class="hero__heading">
+        <h2 class="hero__subheading">Hey I am Asad Moosvi.</h2>
+        <h1 class="hero__heading">
           I <em class="important">design</em> and
           <em class="important">build</em> websites that captivate people.
-        </h2>
+        </h1>
+        <div class="hero__social">
+          <div class="hero__fcc">
+            <a href="https://freecodecamp.org/asadmoosvi" target="_blank" class="hero__icon"><i class="fab fa-free-code-camp"></i></a>
+          </div>
+          <div class="hero__github">
+            <a href="https://github.com/asadmoosvi" target="_blank" id="profile-link" class="hero__icon"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="container container_padding">
         <h2 class="about__heading section-heading">About</h2>
         <p class="about__content">
@@ -75,11 +87,11 @@
       </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="container container_padding">
         <h2 class="projects__heading section-heading">Projects</h2>
         <div class="projects-grid">
-          <div class="project">
+          <a href="javascript:;" class="project project-tile">
             <div class="project__thumbnail">
               <img src="./src/images/thumbnail1.jpg" alt="" />
             </div>
@@ -92,8 +104,8 @@
                 Mollitia ratione suscipit expedita cupiditate quos eaque.
               </p>
             </div>
-          </div>
-          <div class="project">
+          </a>
+          <a href="javascript:;" class="project">
             <div class="project__thumbnail project__thumbnail_swap">
               <img src="./src/images/thumbnail2.jpg" alt="" />
             </div>
@@ -106,8 +118,8 @@
                 Mollitia ratione suscipit expedita cupiditate quos eaque.
               </p>
             </div>
-          </div>
-          <div class="project">
+          </a>
+          <a href="javascript:;" class="project">
             <div class="project__thumbnail">
               <img src="./src/images/thumbnail3.jpg" alt="" />
             </div>
@@ -121,11 +133,11 @@
               </p>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container container_padding">
 
         <h2 class="contact__heading section-heading">Contact</h2>
