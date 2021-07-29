@@ -8,4 +8,4 @@ You can also find these projects on my [Codepen](https://codepen.io/asadmoosvi).
 - [x] Survey Form
 - [x] Product Landing Page
 - [x] Technical Documentation Page
-- [ ] Personal Portfolio Webpage
+- [x] Personal Portfolio Webpage
