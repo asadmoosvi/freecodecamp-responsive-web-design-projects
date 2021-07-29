@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <script src="./src/js/index.js" defer></script>
+    <title>FCC Personal Portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="menu" href="#"><img src="./src/images/menu_white_24dp.svg" alt=""></a>
+      <div class="container">
+        <nav class="nav">
+          <ul class="nav__links">
+            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="#" class="nav__link">About</a></li>
+            <li><a href="#" class="nav__link">Projects</a></li>
+            <li><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container container_padding">
+        <h1 class="hero__subheading">Hey I am John Doe.</h1>
+        <h2 class="hero__heading">
+          I <em class="important">design</em> and
+          <em class="important">build</em> websites that captivate people.
+        </h2>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container container_padding">
+        <h2 class="about__heading section-heading">About</h2>
+        <p class="about__content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          recusandae accusamus aliquam sapiente similique, dolore, pariatur
+          consequatur illum distinctio nisi unde fuga beatae? Accusantium,
+          officiis?
+        </p>
+        <div class="about__cards">
+          <div class="about__card">
+            <img src="./src/images/card1.jpg" alt="" class="about__card-img" />
+            <p class="about__card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Distinctio repudiandae sit esse reiciendis magni reprehenderit.
+            </p>
+          </div>
+          <div class="about__card">
+            <img src="./src/images/card2.jpg" alt="" class="about__card-img" />
+            <p class="about__card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              fugit aspernatur perspiciatis nesciunt eius omnis.
+            </p>
+          </div>
+          <div class="about__card">
+            <img src="./src/images/card3.jpg" alt="" class="about__card-img" />
+            <p class="about__card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              animi deleniti iusto, natus minus beatae.
+            </p>
+          </div>
+
+          <div class="about__card">
+            <img src="./src/images/card4.jpg" alt="" class="about__card-img" />
+            <p class="about__card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              animi deleniti iusto, natus minus beatae.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="container container_padding">
+        <h2 class="projects__heading section-heading">Projects</h2>
+        <div class="projects-grid">
+          <div class="project">
+            <div class="project__thumbnail">
+              <img src="./src/images/thumbnail1.jpg" alt="" />
+            </div>
+            <div class="project__description">
+              <div class="project__title">Responsive Design</div>
+              <p class="project__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, repudiandae amet quia repellat ratione minima.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia ratione suscipit expedita cupiditate quos eaque.
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project__thumbnail project__thumbnail_swap">
+              <img src="./src/images/thumbnail2.jpg" alt="" />
+            </div>
+            <div class="project__description">
+              <div class="project__title">CRM Solution</div>
+              <p class="project__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, repudiandae amet quia repellat ratione minima.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia ratione suscipit expedita cupiditate quos eaque.
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project__thumbnail">
+              <img src="./src/images/thumbnail3.jpg" alt="" />
+            </div>
+            <div class="project__description">
+              <div class="project__title">Custom Themes</div>
+              <p class="project__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, repudiandae amet quia repellat ratione minima.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia ratione suscipit expedita cupiditate quos eaque.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container container_padding">
+
+        <h2 class="contact__heading section-heading">Contact</h2>
+
+        <form class="contact-form" action="">
+          <div class="contact-form__group contact-form__group_name">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="contact-form__group contact-form__group_email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="contact-form__group contact-form__group_message">
+            <label for="message">Message</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+
+          <div class="contact-form__group">
+            <button type="submit" class="contact-form__submit">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </body>
+</html>

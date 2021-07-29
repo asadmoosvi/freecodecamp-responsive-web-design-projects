@@ -1,0 +1,34 @@
+.header {
+  background-color: $secondary-clr;
+}
+.nav {
+  color: $primary-clr;
+  height: 4rem;
+  &__links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: 100%;
+    @include breakpoint {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  &__link {
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    transition: background-color $transition;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  @include breakpoint {
+    height: auto;
+    padding: 1em;
+    display: none;
+  }
+}

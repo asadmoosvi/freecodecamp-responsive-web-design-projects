@@ -1,0 +1,23 @@
+.about {
+  &__cards {
+    padding-top: 3rem;
+    display: flex;
+    gap: 2rem;
+    @include breakpoint {
+      flex-direction: column;
+    }
+  }
+  &__card {
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    flex: 1;
+    &-img {
+      width: 100%;
+    }
+    &-text {
+      padding: 1em;
+    }
+  }
+}

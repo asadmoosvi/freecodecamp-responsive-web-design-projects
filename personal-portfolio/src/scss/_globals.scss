@@ -1,0 +1,71 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-clr;
+  color: $secondary-clr;
+  font-size: $font-md;
+  font-family: $primary-font;
+}
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+.important {
+  color: $accent-clr;
+  filter: brightness(150%);
+}
+
+.container {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  &_padding {
+    padding: 3rem;
+  }
+}
+
+.section-heading {
+  width: fit-content;
+  font-size: $font-xlg;
+  position: relative;
+  margin-bottom: 1rem;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -0.2em;
+    width: 35%;
+    height: 10%;
+    border-radius: 1rem;
+    background-color: $accent-clr;
+  }
+}
+
+
+@mixin breakpoint {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 24px;
+  display: none;
+  @include breakpoint {
+    display: block;
+  }
+}
