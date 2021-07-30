@@ -32,6 +32,7 @@ img {
 
 
 .section-heading {
+  width: -moz-fit-content;
   width: fit-content;
   font-size: $font-xlg;
   position: relative;
