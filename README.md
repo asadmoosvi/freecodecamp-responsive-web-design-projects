@@ -8,4 +8,4 @@ You can also find these projects on my [Codepen](https://codepen.io/asadmoosvi).
 - [x] Survey Form
 - [x] Product Landing Page
 - [x] Technical Documentation Page
-- [x] Personal Portfolio Webpage
+- [x] Personal Portfolio Webpage ([view live site](https://asadmoosvi-portfolio.netlify.app))
