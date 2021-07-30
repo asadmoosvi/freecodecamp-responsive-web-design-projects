@@ -15,8 +15,9 @@
       outline: none;
       box-shadow: 0 4px 16px rgba($accent-clr, 0.2);
     }
-    input {
+    input, textarea {
       font-size: inherit;
+      font-family: inherit;
     }
     textarea {
       min-height: 10rem;
