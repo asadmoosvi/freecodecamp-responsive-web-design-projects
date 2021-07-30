@@ -1,0 +1,36 @@
+.footer {
+  background-color: $secondary-clr;
+  color: $primary-clr;
+  font-size: $font-sm;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint {
+      flex-direction: column;
+      gap: 1em;
+      text-align: center;
+    }
+  }
+
+  &__social-item {
+    padding: 0.5em 0;
+    a {
+      transition: text-shadow $transition;
+    }
+    a:hover {
+      text-shadow: 0 0 32px white;
+    }
+  }
+}
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  &__heading {
+    color: $accent-clr;
+  }
+
+  @include breakpoint {
+    align-items: center;
+  }
+}
