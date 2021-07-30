@@ -30,14 +30,6 @@ img {
   filter: brightness(150%);
 }
 
-.container {
-  max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto;
-  &_padding {
-    padding: 3rem;
-  }
-}
 
 .section-heading {
   width: fit-content;
@@ -60,6 +52,18 @@ img {
 @mixin breakpoint {
   @media screen and (max-width: 1024px) {
     @content;
+  }
+}
+
+.container {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  &_padding {
+    padding: 3rem;
+    @include breakpoint {
+      padding: 2rem;
+    }
   }
 }
 
