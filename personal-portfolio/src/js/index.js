@@ -1,11 +1,12 @@
 // menu button
 const menu = document.querySelector('.menu');
-const nav = document.querySelector('.nav');
+const header = document.querySelector('.header');
 
+let animationApplied = false;
 menu.addEventListener('click', () => {
-  if (nav.style.display == '') {
-    nav.style.display = 'block';
-  } else {
-    nav.style.display = '';
+  header.classList.toggle('show');
+  if (!animationApplied) {
+    header.classList.add('animate');
+    animationApplied = true;
   }
 });

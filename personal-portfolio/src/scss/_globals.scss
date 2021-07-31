@@ -69,7 +69,8 @@ img {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
   top: 1rem;
   right: 1rem;
   display: none;

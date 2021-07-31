@@ -5,6 +5,15 @@
   left: 0;
   right: 0;
   z-index: 999;
+  @include breakpoint {
+    transform: translateY(-100%);
+    &.show {
+      transform: translate(0);
+    }
+    &.animate {
+      transition: transform 600ms ease-in-out;
+    }
+  }
 }
 .nav {
   color: $primary-clr;
@@ -34,6 +43,5 @@
   @include breakpoint {
     height: auto;
     padding: 1em;
-    display: none;
   }
 }
