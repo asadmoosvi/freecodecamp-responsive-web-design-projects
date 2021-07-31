@@ -27,4 +27,9 @@
       text-shadow: 0 0 32px white;
     }
   }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
