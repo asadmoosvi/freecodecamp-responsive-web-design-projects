@@ -43,5 +43,8 @@
     &:active {
       background-color: darken($accent-clr, 20%);
     }
+    @include breakpoint {
+      align-self: stretch;
+    }
   }
 }
