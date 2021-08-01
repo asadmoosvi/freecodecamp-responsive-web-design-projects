@@ -7,7 +7,7 @@
     justify-content: space-between;
     @include breakpoint {
       flex-direction: column;
-      gap: 1em;
+      gap: 2em;
       text-align: center;
     }
   }
