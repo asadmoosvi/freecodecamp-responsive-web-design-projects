@@ -49,9 +49,14 @@ img {
   }
 }
 
-
-@mixin breakpoint {
+@mixin breakpoint-tablet {
   @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+/* this is the mobile breakpoint */
+@mixin breakpoint {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
